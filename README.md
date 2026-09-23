@@ -1,16 +1,16 @@
 # manara-graduation-project
 please find the screenshots in the file 
 
-AWS Services Used
-VPC with public and private subnets
-EC2 + Auto Scaling Group
-Application Load Balancer
-CloudFront
-AWS WAF
-RDS PostgreSQL
-Systems Manager Session Manager
-CloudWatch
-SNS
+AWS Services Used/
+VPC with public and private subnets/
+EC2 + Auto Scaling Group/
+Application Load Balancer/
+CloudFront/
+AWS WAF/
+RDS PostgreSQL/
+Systems Manager Session Manager/
+CloudWatch/
+SNS/
 Network Design
 VPC: 10.0.0.0/16
 Public subnets: 10.0.1.0/24, 10.0.2.0/24
