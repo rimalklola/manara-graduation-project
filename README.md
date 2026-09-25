@@ -1,4 +1,4 @@
-````markdown
+
 # Scalable Web Application on AWS
 
 ## Project Overview
