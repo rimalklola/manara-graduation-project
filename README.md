@@ -21,7 +21,8 @@ The main objectives of the project are:
 
 ## Architecture Diagram
 
-![AWS Architecture Diagram](architecture/architecture-diagram.png)
+<img width="1448" height="1086" alt="lucidchart" src="https://github.com/user-attachments/assets/55147061-98f0-4ddf-abbc-e3c05e1d0e0f" />
+
 
 ### Traffic Flow
 
@@ -101,6 +102,7 @@ The infrastructure is deployed inside a custom VPC.
 ```text
 10.0.0.0/16
 ```
+<img width="1547" height="672" alt="vpc" src="https://github.com/user-attachments/assets/0537fe52-c538-471e-a110-638cb83a535d" />
 
 ### Subnets
 
@@ -164,6 +166,7 @@ The instances are distributed across two Availability Zones to improve availabil
 ---
 
 ## Load Balancing
+<img width="932" height="526" alt="lb" src="https://github.com/user-attachments/assets/638f4817-c921-4273-b038-295429a4e381" />
 
 The Application Load Balancer distributes incoming requests between healthy EC2 instances.
 
@@ -174,6 +177,7 @@ Protocol: HTTP
 Port: 80
 Health Check Path: /
 ```
+<img width="947" height="622" alt="target groups" src="https://github.com/user-attachments/assets/27826b99-8d0f-4289-ab34-3a34b96c223b" />
 
 Only healthy targets receive traffic.
 
@@ -212,6 +216,7 @@ A production deployment would use Multi-AZ RDS for automatic failover and improv
 ---
 
 ## Security Groups
+<img width="1612" height="432" alt="sgs" src="https://github.com/user-attachments/assets/c6e6fdcb-07f8-4007-9664-f9e371b9faf5" />
 
 Three main security groups are used.
 
@@ -223,6 +228,7 @@ Allows public web traffic:
 HTTP 80  ← 0.0.0.0/0
 HTTPS 443 ← 0.0.0.0/0
 ```
+<img width="915" height="467" alt="thewebapp" src="https://github.com/user-attachments/assets/afaada5a-dc86-4a75-bcf7-fc6626adcb1c" />
 
 ### Application Security Group
 
@@ -295,6 +301,7 @@ CloudFront
  ↓
 ALB
 ```
+<img width="942" height="427" alt="cloudfront" src="https://github.com/user-attachments/assets/f1ab4ceb-c0aa-453a-a758-fc42daf1c507" />
 
 ---
 
@@ -310,6 +317,7 @@ Examples include:
 * Known Bad Inputs
 * Amazon IP Reputation List
 * SQL Injection Rules
+<img width="592" height="492" alt="alarm" src="https://github.com/user-attachments/assets/f32ca338-2d1c-4f41-b3f6-9face9b62295" />
 
 The traffic flow becomes:
 
@@ -359,20 +367,7 @@ A CloudWatch dashboard is also used to monitor infrastructure metrics.
 
 ---
 
-## Route 53
 
-A custom domain was not used in this lab environment.
-
-The application is accessed using the default CloudFront distribution domain.
-
-In a production environment, Amazon Route 53 would be configured with an Alias record pointing to CloudFront.
-
-```text
-Custom Domain
-     ↓
-Route 53
-     ↓
-CloudFront
 ```
 
 ---
